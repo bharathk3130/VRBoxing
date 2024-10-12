@@ -1,0 +1,45 @@
+{
+    "name": "BoxingInputAction",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "9de6bcf5-cd44-4fa7-94ba-527afe672c6d",
+            "actions": [
+                {
+                    "name": "SetInitiailPosition",
+                    "type": "Button",
+                    "id": "ac56df82-6bd2-46df-a71d-dfce707bd070",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e450bbb8-3e5b-419a-85c6-501b8bd3ccf6",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetInitiailPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "993af06e-45ff-4445-93bd-c8950e6423ab",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SetInitiailPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
