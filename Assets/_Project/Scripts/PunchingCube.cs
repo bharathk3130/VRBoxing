@@ -2,7 +2,7 @@
 
 public class PunchingCube : MonoBehaviour
 {
-    public DodgingCubeDeathEffects DeathEffects;
+    public PunchingCubeDeathEffects DeathEffects;
 
     // Settings
     public float Speed = 15;

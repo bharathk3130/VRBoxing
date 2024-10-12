@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(DissolveEffect))]
-public class DodgingCubeDeathEffects : MonoBehaviour
+public class PunchingCubeDeathEffects : MonoBehaviour
 {
     [SerializeField] ParticleSystem _deathEffectParticles;
     [SerializeField] AudioSource _deathAudio;
