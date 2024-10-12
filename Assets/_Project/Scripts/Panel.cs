@@ -12,7 +12,7 @@ public class Panel : MonoBehaviour
     public GameObject DuckText;
 
     // Settings
-    public int Speed = 5;
+    public int Speed = 15;
     public int Lifetime = 20;
     
     public void Initialize(CubeType[] cubeTypes)

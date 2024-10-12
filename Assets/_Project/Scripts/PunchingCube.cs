@@ -5,7 +5,7 @@ public class PunchingCube : MonoBehaviour
     public DodgingCubeDeathEffects DeathEffects;
 
     // Settings
-    public float Speed = 5;
+    public float Speed = 15;
     public int Lifetime = 20;
     public int Score = 5;
 

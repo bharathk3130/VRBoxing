@@ -14,9 +14,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] ScoreUI _scoreUI;
     
     [Header("Exclamation Text Settings")]
-    [SerializeField] Vector2 _exclamationPosXRange;
-    [SerializeField] Vector2 _exclamationRotZRange;
-    [SerializeField] Vector2 _exclamationScaleRange;
+    [SerializeField] Vector2 _exclamationPosXRange = new(-150, 150);
+    [SerializeField] Vector2 _exclamationRotZRange = new(-15, 15);
+    [SerializeField] Vector2 _exclamationScaleRange = new(0.7f, 1.1f);
 
     int _score;
 
