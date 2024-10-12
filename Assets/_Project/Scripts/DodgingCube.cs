@@ -7,8 +7,11 @@ public class DodgingCube : MonoBehaviour
     public int Lifetime = 20;
     public int DeathPenalty = 15;
 
-    void Start()
+    GameManager gameManager;
+
+    public void Initialize(GameManager gameManager)
     {
+        this.gameManager = gameManager;
         Destroy(gameObject, Lifetime);
     }
 
@@ -27,7 +30,7 @@ public class DodgingCube : MonoBehaviour
 
     void Die()
     {
-        GameManager.Instance.AddScore(-DeathPenalty);
+        gameManager.AddScore(-DeathPenalty);
         Destroy(gameObject);
     }
 }

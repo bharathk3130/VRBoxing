@@ -11,8 +11,10 @@ public class PunchingCube : MonoBehaviour
 
     bool _isDead;
     string _handTag;
+
+    GameManager gameManager;
     
-    public void Initialize(CubeType cubeType)
+    public void Initialize(CubeType cubeType, GameManager gameManager)
     {
         if (cubeType == CubeType.LeftJab || cubeType == CubeType.LeftHook)
         {
@@ -22,7 +24,8 @@ public class PunchingCube : MonoBehaviour
         {
             _handTag = "RightHand";
         }
-        
+
+        this.gameManager = gameManager;
         Destroy(gameObject, Lifetime);
     }
 
@@ -45,7 +48,7 @@ public class PunchingCube : MonoBehaviour
     void Die()
     {
         _isDead = true;
-        GameManager.Instance.AddScore(Score);
+        gameManager.AddScore(Score);
         DeathEffects.Play();
     }
 }

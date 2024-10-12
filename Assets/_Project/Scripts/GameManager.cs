@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
-
     [Header("References")]
     [SerializeField] TextMeshProUGUI _scoreText;
     [SerializeField] Transform _exclamationCanvas;
@@ -22,18 +20,6 @@ public class GameManager : MonoBehaviour
 
     string[] _compliments = { "Perfect!", "Amazing!", "Great!" };
     string[] _negativeRemarks = { "Oops!", "Ouch!" };
-    
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
     
     public void AddScore(int increment)
     {

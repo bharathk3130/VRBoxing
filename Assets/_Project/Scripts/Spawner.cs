@@ -26,6 +26,9 @@ public class Spawner : MonoBehaviour
     public Transform RightHookSpawnPoint;
     public Transform DuckSpawnPoint;
 
+    [Header("References")]
+    public GameManager gameManager;
+
     [Header("Settings")]
     public float ComboInterval = 4;
     public float CubeInterval = 0.5f;
@@ -80,10 +83,14 @@ public class Spawner : MonoBehaviour
 
         GameObject cubeInstance = Instantiate(cube, spawnPoint.position, spawnPoint.rotation);
 
-        if (cubeType != CubeType.Duck)
+        if (cubeType == CubeType.Duck)
+        {
+            DodgingCube dodgingCube = cubeInstance.GetComponent<DodgingCube>();
+            dodgingCube.Initialize(gameManager);
+        } else
         {
             PunchingCube punchingCube = cubeInstance.GetComponent<PunchingCube>();
-            punchingCube.Initialize(cubeType);
+            punchingCube.Initialize(cubeType, gameManager);
         }
     }
     
