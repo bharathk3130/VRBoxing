@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -55,7 +54,7 @@ public class Spawner : MonoBehaviour
     
     void SpawnPanel(CubeType[] cubeTypes)
     {
-        GameObject panelInstance = Instantiate(Panel, PanelSpawnPoint.position, quaternion.identity);
+        GameObject panelInstance = Instantiate(Panel, PanelSpawnPoint.position, Quaternion.identity);
         Panel panel = panelInstance.GetComponent<Panel>();
         
         panel.Initialize(cubeTypes);
